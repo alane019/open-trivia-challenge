@@ -1,0 +1,9 @@
+html {
+  /* background-color: floralwhite; */
+
+  height: 100vh;
+}
+
+main {
+  min-height: 75vh;
+}

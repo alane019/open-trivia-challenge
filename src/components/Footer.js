@@ -3,16 +3,13 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const Footer = () => {
 	return (
-		<footer>
-			<Container>
+		<footer id="footer">
 			<hr />
-
 				<Row>
-					<Col className="text-center py-3">
-						<i> Copyright &copy; React Trivia Challenge</i>
+					<Col className="text-center ">
+						<i>Trivia Solutions Ltd &copy; 2021 </i>
 					</Col>
 				</Row>
-			</Container>
 		</footer>
 	);
 };

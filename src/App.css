@@ -1,9 +1,122 @@
-html {
-  /* background-color: floralwhite; */
-
+/* html {
   height: 100vh;
+} */
+
+
+#app-outer{
+	-webkit-filter: saturate(0.9) brightness(.95);
+	filter: saturate(0.9) brightness(.95);
+	min-height: 50vh;
+	height: 100vh;
+	background: url(./images/title.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: fill;
+	margin: 0;
+    padding: 0;
+
 }
 
-main {
-  min-height: 75vh;
+#app-outer{
+	backdrop-filter: blur(80px);
 }
+
+
+.btn-success{
+	text-shadow: #143026 0 0 2px;
+	letter-spacing: 1px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	text-shadow: #00ffc43b 0 0 10px;
+}
+
+#center-text{
+	margin-top: 35px;
+	color: snow;
+	text-shadow: black 0 0 8px;
+}
+
+#start-btn{
+	animation: pulse-green 2s infinite;
+	background-color: #1cfa9ea6;
+	box-shadow: black 0 0 8px 5px;
+}
+
+
+#home{
+	background-color: #1a093373;
+	/* height: 80vh; */
+	width: 100%;
+	text-shadow: black;
+}
+
+header * {
+	background-color: rgba(128, 0, 128, 0.144);
+	height: 1px;
+	box-sizing: unset;
+}
+#nav{
+	height: 1px;
+	background: none;
+	box-sizing: unset;
+}
+
+#nav a {
+	position: relative;
+	top: 10px;
+	margin-left: 5vw;
+}
+
+#headline{
+	color: rgb(115, 255, 232);
+	text-shadow: black 0 0 8px;
+	margin-top: 125px;
+}
+
+
+/* #nav, header, .home-content, #title{
+	background: linear-gradient(#20090954, #090c2e4b);
+	margin: 8px 8px 6px 6px;
+	padding: 8px 8px 6px 6px;
+	box-shadow:  #a8c21615 0 0 2px;
+  } */
+  
+  .home-content{
+	background: linear-gradient(#20090954, #090c2e4b);
+
+  }
+
+  #footer{
+	  position: relative;
+	  margin: auto;
+	  margin-top: 50vh;
+	  padding-bottom: 10vh;
+	  opacity: 80%;
+  }
+
+
+
+/* pulse animation */
+
+@keyframes pulse-green {
+	0% {
+	  transform: scale(0.95);
+	  box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
+	}
+	
+	70% {
+	  transform: scale(1);
+	  box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
+	}
+	
+	100% {
+	  transform: scale(0.95);
+	  box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+	}
+  }
+  
+

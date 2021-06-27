@@ -1,19 +1,17 @@
 import React from "react";
-import { Navbar, Container } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 
 import { LinkContainer } from "react-router-bootstrap";
 
 const Header = () => {
   return (
-    <header>
-      <Navbar expand="lg" bg="dark" variant="dark" collapseOnSelect>
-        <Container>
+      <Navbar id="nav" expand="lg"  variant="dark">
+        <div>
           <LinkContainer to="/">
-            <Navbar.Brand className="mr-auto">React Trivia Game</Navbar.Brand>
+            <Navbar.Brand id="nav-text" className="mr-auto">React Trivia Challenge</Navbar.Brand>
           </LinkContainer>
-        </Container>
+        </div>
       </Navbar>
-    </header>
   );
 };
 export default Header;

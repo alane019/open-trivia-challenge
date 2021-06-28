@@ -7,7 +7,7 @@ const Footer = () => {
 			<hr />
 				<Row>
 					<Col className="text-center ">
-						<i>Trivia Solutions Ltd &copy; 2021 </i>
+						<i>Totally Awesome Trivia Corp Ltd&copy; 2021 </i>
 					</Col>
 				</Row>
 		</footer>

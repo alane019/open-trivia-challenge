@@ -1,11 +1,7 @@
-/* html {
-  height: 100vh;
-} */
-
 
 #app-outer{
 	-webkit-filter: saturate(0.9) brightness(.95);
-	filter: saturate(0.9) brightness(.95);
+	filter: saturate(0.9) brightness(.85);
 	min-height: 50vh;
 	height: 100vh;
 	background: url(./images/title.png) no-repeat center center fixed; 
@@ -15,7 +11,6 @@
 	background-size: fill;
 	margin: 0;
     padding: 0;
-
 }
 
 #app-outer{
@@ -32,24 +27,45 @@
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 	text-shadow: #00ffc43b 0 0 10px;
+	
 }
 
 #center-text{
 	margin-top: 35px;
 	color: snow;
 	text-shadow: black 0 0 8px;
+	letter-spacing: 1.5px;
 }
 
-#start-btn{
+.response-btn{
+	margin: 5px;
+}
+
+.action-btn{
 	animation: pulse-green 2s infinite;
-	background-color: #1cfa9ea6;
 	box-shadow: black 0 0 8px 5px;
+	margin-top: 15vh;
+	padding: 8px 23px  !important;
+	border-radius: 3px;
+	letter-spacing: 1.25px;
+	font-size: 20px !important;
+}
+
+
+.action-btn-secondary{
+	animation: pulse-green 3s infinite;
+	box-shadow: black 0 0 8px 5px;
+	margin: 2vh;
+	background-color: #18c283cb;
+	padding: 8px 23px  !important;
+	border-radius: 3px;
+	letter-spacing: 1.25px;
+	font-size: 20px !important;
 }
 
 
 #home{
 	background-color: #1a093373;
-	/* height: 80vh; */
 	width: 100%;
 	text-shadow: black;
 }
@@ -59,6 +75,7 @@ header * {
 	height: 1px;
 	box-sizing: unset;
 }
+
 #nav{
 	height: 1px;
 	background: none;
@@ -74,20 +91,21 @@ header * {
 #headline{
 	color: rgb(115, 255, 232);
 	text-shadow: black 0 0 8px;
-	margin-top: 125px;
+	padding-top: 100px;
 }
 
-
-/* #nav, header, .home-content, #title{
-	background: linear-gradient(#20090954, #090c2e4b);
-	margin: 8px 8px 6px 6px;
-	padding: 8px 8px 6px 6px;
-	box-shadow:  #a8c21615 0 0 2px;
-  } */
+#results{
+	color: rgb(115, 255, 232);
+	text-shadow: black 0 0 8px;
+	background-color: rgba(2,2,2,.4);
+	padding-bottom: 40px;
+	margin-top: 75px;
+	padding-top: 15px !important;
+	font-size: larger;
+}
   
   .home-content{
 	background: linear-gradient(#20090954, #090c2e4b);
-
   }
 
   #footer{
@@ -98,13 +116,38 @@ header * {
 	  opacity: 80%;
   }
 
+  .quiz-page div, 
+  .quiz-page h2{
+	margin: 1vh;
+  }
+
+  
+  #quiz-progress *  {
+	letter-spacing: 2px !important;
+  }
+
+  #result-display-area .incorrect {
+	color: rgb(73, 15, 15); 
+  }
+
+  #result-display-area *{
+	letter-spacing: 1.2px;
+  }
+
+  .response-btn{
+	  background-color: #1c0c2596;
+  }
+
+  .response-btn:hover{
+	text-shadow: #1c0c2596 0 0 2px;
+}
+
 
 
 /* pulse animation */
-
 @keyframes pulse-green {
 	0% {
-	  transform: scale(0.95);
+	  transform: scale(0.99);
 	  box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
 	}
 	
@@ -114,7 +157,7 @@ header * {
 	}
 	
 	100% {
-	  transform: scale(0.95);
+	  transform: scale(0.99);
 	  box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
 	}
   }

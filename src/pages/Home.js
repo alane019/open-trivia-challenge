@@ -10,10 +10,10 @@ export default function Home() {
 	return (
 		<div id="home-container">
 			<div className="home-content">
-				<div id="home">
 					<Header />
+				<div id="home">
 
-					<h1 id="headline">Welcome to React Trivia Challenge</h1>
+					<h1 className="headline">Welcome to React Trivia Challenge</h1>
 
 					<h2 id="center-text">Press start to test your trivia knowledge.</h2>
 

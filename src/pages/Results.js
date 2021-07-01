@@ -5,28 +5,23 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useHistory } from "react-router-dom";
 
-const Results = (props) => {
+const Results = () => {
+
 	const location = useLocation();
 	const history = useHistory();
+
 	const [finalScore, setFinalScore] = useState(0);
 	const [questionCount, setQuestionCount] = useState(0);
-	const [resultHistory, setResultHistory] = useState(0);
-	const [mapData, setMapData] = useState(false);
+	const [resultHistory, setResultHistory] = useState([]);
 
 	const navigateToStartScreen = () => history.push("/");
 
 	useEffect(() => {
-		if(location.state){
+
 			setFinalScore(location.state.finalScore);
-			setQuestionCount(location.state.questionCount);
+			setQuestionCount(location.state.questionCount);	
 			setResultHistory(location.state.resultHistory);
-		}
-
-		else{
-			history.push("/");
-		}
 	 }, []);
-
 
 
   return (
@@ -34,15 +29,30 @@ const Results = (props) => {
 	 <Header />
 	 <Container>
 		<div id="results">
-			<h1>Results</h1>
-			<div id="center-text">
+			<h1 className="headline">Results</h1>
+			<div id="score">
 				<p> {finalScore}  of {questionCount} responses were correct.</p>
+				<p className={( finalScore / questionCount < .5 ?
+					 "percent red" : "percent")} >
+					 {( Math.round((finalScore / questionCount) * 100))} %
+				</p>
 			</div>
-			<div>
-				<div>
-		
-				</div>		
-				</div>
+			<div id="detailed-result-listing">
+
+				<ol>	
+					{resultHistory.map((result, i) => (
+						<li className="answer-summary-input" key={i}>
+							<div className={(result.isCorrect ? "item green" : "item red") }>
+								{result.correctOrIncorrect}
+							</div>
+							<div className="question-text">
+								{result.questionText}
+							</div>
+						</li> 
+					))}
+				</ol>
+			
+			</div>
 				<button 
 					id="action-btn" 
 					className="btn btn-success action-btn"

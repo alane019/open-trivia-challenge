@@ -11,9 +11,6 @@
 </i>
 
 
-
- <img src="./public/images/screen-question.png" alt="trivia question screen" style="display: block; margin-left: auto; margin-right: auto;" min-width="250px" width="80%"/>
-
 ## Table of Contents
 
 
@@ -23,7 +20,6 @@
 - [Contributing](#contributing)
 
 ---
- <img src="./public/images/screen-results.png" alt="trivia question screen" style="display: block; margin-left: auto; margin-right: auto;" min-width="250px" width="80%"/>
 
 ##  Getting Started <a name = "environment_setup"></a>
 

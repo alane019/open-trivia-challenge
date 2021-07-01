@@ -1,71 +1,60 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row } from "react-bootstrap";
+import axios from "axios";
 
-const questions = [
-		  {
-			"category": "Vehicles",
-			"type": "boolean",
-			"difficulty": "hard",
-			"question": "In 1993 Swedish car manufacturer Saab experimented with replacing the steering wheel with a joystick in a Saab 9000.",
-			"correct_answer": "True",
-			"incorrect_answers": [
-			  "False"
-			]
-		  },
-		  {
-			"category": "Entertainment: Music",
-			"type": "boolean",
-			"difficulty": "hard",
-			"question": "The song &quot;Mystery Train&quot; was released by artist &quot;Little Junior&#039;s Blue Flames&quot; in 1953.",
-			"correct_answer": "True",
-			"incorrect_answers": [
-			  "False"
-			]
-		  },
-		  {
-			"category": "Entertainment: Video Games",
-			"type": "boolean",
-			"difficulty": "hard",
-			"question": "The names of Roxas&#039;s Keyblades in Kingdom Hearts are &quot;Oathkeeper&quot; and &quot;Oblivion&quot;.",
-			"correct_answer": "True",
-			"incorrect_answers": [
-			  "False"
-			]
-		  },
-	];
-
-function Quiz() {
+const Quiz = () => {
 	const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
 	const [score, setScore] = useState(0);
-	const [ resultHistory, setResultHistory] = useState([]);
-	const [ displayNextBtn, setDisplayNextBtn] = useState(false);
-	const [ showAnswer, setShowAnswer] = useState(false);
-	const [ questionCategory, setQuestionCategory] = useState("");
-	const [ currentQuestion, setCurrentQuestion] = useState("");
-	const [ correctAnswer, setCorrectAnswer] = useState("");
-	
+	const [resultHistory, setResultHistory] = useState([]);
+	const [displayNextBtn, setDisplayNextBtn] = useState(false);
+	const [showAnswer, setShowAnswer] = useState(false);
+	const [questionCategory, setQuestionCategory] = useState("");
+	const [currentQuestion, setCurrentQuestion] = useState("");
+	const [correctAnswer, setCorrectAnswer] = useState("");
+	const [questions, setQuestions] = useState([]);
+
 	const history = useHistory();
-	
-	const navigateToResults = () => history.push(
-		{
-			pathname: '/results',
-			state: { 
+	const triviaData = `https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean`;
+
+	const navigateToResults = () => {
+		history.push({
+			pathname: "/results",
+			state: {
 				questionCount: questions.length,
 				finalScore: score,
 				resultHistory: resultHistory,
-			}
-		}
-	);
+			},
+		});
+	};
 
-		
-	useEffect(() => {
-		console.log("useEffect: Question index update (or initial component load)")
+	function htmlDecode(input) {
+		var doc = new DOMParser().parseFromString(input, "text/html");
+		return doc.documentElement.textContent;
+	}
+
+	const axiosFetchData = (url) => {
+		axios
+			.get(url)
+			.then((res) => {
+				let questionsTemp = res.data.results;
+				setQuestions(questionsTemp);
+				setQuestionCategory(questionsTemp[currentQuestionIdx].category);
+				setCurrentQuestion(htmlDecode(questionsTemp[currentQuestionIdx].question));
+				setCorrectAnswer(questionsTemp[currentQuestionIdx].correct_answer);
+			})
+	};
+
+	const displayNextQuestion = () => {
+		let decodedQuestion = htmlDecode(questions[currentQuestionIdx].question)
 		setQuestionCategory(questions[currentQuestionIdx].category);
-		setCurrentQuestion(questions[currentQuestionIdx].question);
+		setCurrentQuestion(decodedQuestion);
 		setCorrectAnswer(questions[currentQuestionIdx].correct_answer);
+	};
 
-	 }, [currentQuestionIdx]);
+	useEffect(() => {
+		questions.length < 1 ? axiosFetchData(triviaData) : displayNextQuestion();
+	}, [currentQuestionIdx]);
 
 	const handleNextBtn = () => {
 		/* diplay results section only after answer submitted.
@@ -73,68 +62,114 @@ function Quiz() {
 			 the next question is displayed. */
 		setDisplayNextBtn(false);
 		setShowAnswer(false);
-		if ((currentQuestionIdx + 1) < questions.length) {
+		if (currentQuestionIdx + 1 < questions.length) {
 			setCurrentQuestionIdx(currentQuestionIdx + 1);
 		} else {
 			navigateToResults();
 		}
-	}
+	};
 
-    const handleUserResponse = (userResponse, correctOrIncorrect) => {
+	const handleUserResponse = (userResponse, correctOrIncorrect) => {
 		correctOrIncorrect === "Correct" ? setScore(score + 1) : null;
-		let responseDetails = {
-			questionText: currentQuestion,
-			userResponse: userResponse,
-			correctOrIncorrect: correctOrIncorrect,
-		}
 
-        setResultHistory([...resultHistory, responseDetails]);
+		setResultHistory([
+			...resultHistory,
+			{
+				questionText: currentQuestion,
+				userResponse: userResponse,
+				isCorrect: correctOrIncorrect === "Correct" ? true : false,
+				correctOrIncorrect: correctOrIncorrect,
+			},
+		]);
 		setDisplayNextBtn(true);
 		setShowAnswer(true);
-    };
+	};
 
 	return (
-				<div className="quiz-page">
-				<Container className="quiz-container"> 
-					<h2 id="headline">Question Category: {questionCategory}</h2>
-
-					<Row id="question-display-area">
-						<div className="question">
-							{currentQuestion}
-						</div>
-					</Row>
-					<Row id="response-button-area"  style={{ display: showAnswer ? "none" : "block" }}>
-						<button id="true-btn" className="btn response-btn btn-outline-info"
-						onClick={() => correctAnswer === "True" ? 
-									handleUserResponse( "True","Correct")
-									: handleUserResponse("True", "Incorrect")
-						} > True </button>
-						<button id="false-btn" className="btn response-btn btn-outline-info"
-
-						onClick={() => correctAnswer  === "False" ?
-								handleUserResponse("False", "Correct") 
-								: handleUserResponse("False", "Incorrect")
-						}> False </button>
-					</Row>
-					<Row id="next-question-button-area" >
-						{displayNextBtn ? <button id="next-btn" className="btn btn-outline-success action-btn-secondary"
-						 onClick={handleNextBtn}> Continue </button> : ""}
-					</Row>
-
-					<Row id="result-display-area">
-						{  showAnswer ? <div>
-							<p><b>{resultHistory[currentQuestionIdx].correctOrIncorrect}</b></p>
-							<p className="question-result">  Your response: &nbsp; <b>{resultHistory[currentQuestionIdx].userResponse}  </b> 	 {" "}
-							was {resultHistory[currentQuestionIdx].correctOrIncorrect}. </p>  </div> : "" 
+		<div className="quiz-page">
+			<Container className="quiz-container center">
+				<h1 className="headline">Question Category: {questionCategory}</h1>
+				<Row id="question-display-area">
+					<div className="question">{currentQuestion}</div>
+				</Row>
+				<Row
+					id="response-button-area"
+					style={{ display: showAnswer ? "none" : "block" }}
+				>
+					<button
+						id="true-btn"
+						className="btn response-btn btn-outline-info"
+						onClick={() =>
+							correctAnswer === "True"
+								? handleUserResponse("True", "Correct")
+								: handleUserResponse("True", "Incorrect")
 						}
+					>
+						{" "}
+						True{" "}
+					</button>
+					<button
+						id="false-btn"
+						className="btn response-btn btn-outline-info"
+						onClick={() =>
+							correctAnswer === "False"
+								? handleUserResponse("False", "Correct")
+								: handleUserResponse("False", "Incorrect")
+						}
+					>
+						{" "}
+						False{" "}
+					</button>
+				</Row>
+				<Row id="next-question-button-area">
+					{displayNextBtn ? (
+						<button
+							id="next-btn"
+							className="btn btn-outline-success action-btn-secondary"
+							onClick={handleNextBtn}
+						>
+							{" "}
+							Continue{" "}
+						</button>
+					) : (
+						""
+					)}
+				</Row>
+				<Row id="result-card-body" className="card-body">
+					<Row id="result-display-area">
+						{showAnswer ? (
+							<div>
+								<div
+									className={
+										resultHistory[currentQuestionIdx].isCorrect
+											? "item green"
+											: "item red"
+									}
+								>
+									<b>{resultHistory[currentQuestionIdx].correctOrIncorrect}</b>
+								</div>
+								<p className="question-result">
+									{`Your response (${resultHistory[currentQuestionIdx].userResponse})
+									was `}{" "}
+									{resultHistory[
+										currentQuestionIdx
+									].correctOrIncorrect.toLowerCase()}
+								</p>
+							</div>
+						) : (
+							""
+						)}
 					</Row>
 					<Row id="quiz-progress">
-							<p>Question {currentQuestionIdx + 1 } of {questions.length}  </p> 
-							<p>Score: {score}</p>
-					</Row>	
-				</Container>
-				</div>
+						<p>
+							Question {currentQuestionIdx + 1} of {questions.length}{" "}
+						</p>
+						<p>Score: {score}</p>
+					</Row>
+				</Row>
+			</Container>
+		</div>
 	);
-}
+};
 
 export default Quiz;

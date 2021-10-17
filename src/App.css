@@ -2,7 +2,7 @@
 	-webkit-filter: saturate(0.9) brightness(0.95);
 	filter: saturate(0.9) brightness(0.85);
 	min-height: 50vh;
-	height: 100vh;
+	height: 150vh !important;
 	background: url(./images/title.png) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -10,21 +10,27 @@
 	background-size: fill;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 
 #app-outer {
 	backdrop-filter: blur(80px);
 	height: 100vh !important;
-	overflow: hidden;
 	overflow: auto;
+
 }
 
 #root,
 html,
 body {
 	height: 100vh !important;
-	overflow: hidden;
 	color: #b7dbe7;
+
+}
+
+#body{
+	background: linear-gradient(#16092bd1, #070b2ea0);
+
 }
 
 
@@ -67,7 +73,7 @@ h6 {
 }
 
 
-.start-btn {
+/* .start-btn {
 	animation: pulse-green 1s infinite;
 	box-shadow: black 0 0 8px 10px;
 	padding: 8px 23px !important;
@@ -75,15 +81,23 @@ h6 {
 	letter-spacing: 1.25px;
 	font-size: 20px !important;
 	 background: linear-gradient( #279751, #225e39); 
-}
+} */
 
 #start-btn{
+
+	animation: pulse-green 1s infinite;
+	box-shadow: black 0 0 8px 10px;
+	padding: 8px 23px !important;
+	border-radius: 3px;
+	letter-spacing: 1.25px;
 	font-family: 'Knewave', cursive;
 	color:rgb(220, 220, 220);
 	margin-top: 11vh;
-	width: 295px;
-	height: 95px;
+	width: 23rem;
+	height: 7.5rem;
 	font-size: 3rem !important;
+	background: linear-gradient( #279751, #225e39); 
+
 
 }
 
@@ -92,7 +106,7 @@ h6 {
 	color:rgb(220, 220, 220);
 	margin-top: 8vh;
 	width: 23rem;
-	height: 95px;
+	height: 7.5rem;
 	font-size: 2.25rem !important;
 	letter-spacing: .5rem;
 }
@@ -208,6 +222,7 @@ header * {
 .question{
 text-shadow: pink 0  0  4px;
 font-size: 1.6rem;
+height: 30vh;
 }
 
 
@@ -221,10 +236,11 @@ font-size: 1.6rem;
 
 .splash-page-content {
 	background: linear-gradient(#16092bd1, #070b2ea0);
+	height: 100vh !important;
 }
 
 #splash-page-container{
-	height: 100vh;
+	height: 100vh !important;
 }
 
 #splash-page {
@@ -366,3 +382,70 @@ link:hover {
 }
 
 
+/* ------ Media query ------------------------- */
+
+@media (max-width: 600px) {
+	#title {
+	  font-family: 'Monofett', cursive;
+	  font-size: 3.25rem;
+	  letter-spacing: .4rem;
+	  margin-top: 3vh;
+	  letter-spacing: 4px;;
+	}
+
+
+
+	
+#start-btn, #restart-btn {
+	animation: pulse-green 1s infinite;
+	padding: 8px 23px !important;
+	border-radius: 2px;
+	letter-spacing: 1.25px;
+	font-size: 1rem !important;
+	 background: linear-gradient( #279751, #225e39); 
+	 width: 5rem;
+	 height: 2rem;
+	 font-family: 'Knewave', cursive;
+	 color:rgb(220, 220, 220);
+	 margin-top: 11vh;
+	 width: 13rem;
+	 height: 5rem;
+	 font-size: 1.5rem !important;
+	 margin-top: 8vh;
+	 max-height: 5rem;
+}
+
+#restart-btn{
+	margin-bottom: 5rem;
+}
+
+
+#footer{
+display: none;
+
+}
+
+#results{
+	padding: 20px;
+}
+
+#splash-subheading{
+ max-width: 80vw;
+ margin: auto;
+ margin-top: 1rem;
+}
+
+#app-outer, #splash-page{
+	background:
+	radial-gradient(#0e1e0913, #0a312315, #0a354723),
+	 linear-gradient(#0e0920, #210f3dd2, #1b0d31d1);
+}
+
+
+div .text-center col{
+	margin-bottom:	5rem;
+
+}
+
+
+  }

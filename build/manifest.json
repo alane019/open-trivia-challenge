@@ -1,0 +1,10 @@
+{
+	"short_name": "Trivia",
+	"name": "React Trivia Game",
+	"icons":[],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#2a1f3f",
+	"background_color": "#2a1f3f"
+  }
+  

@@ -7,11 +7,6 @@
   "engines": {
     "npm": "7.x"
   },
-	"buildpacks": [
-	  {
-		"url": "mars/create-react-app"
-	  }
-	],
   "dependencies": {
     "axios": "0.21.1",
     "react": "17.0.2",

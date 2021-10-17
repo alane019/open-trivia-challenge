@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./bootstrap.min.css";
-import Home from "./pages/Home";
+import SplashPage from "./pages/SpashPage";
 import Quiz from "./pages/Quiz";
 import Results from "./pages/Results";
 import "./App.css";
@@ -14,7 +14,7 @@ function App() {
 				<Switch>
 						<Route path="/quiz" component={Quiz} exact />
 						<Route path="/results" component={Results} exact />
-						<Route path="/" component={Home} />
+						<Route path="/" component={SplashPage} />
 				</Switch>
 		
 			</div>

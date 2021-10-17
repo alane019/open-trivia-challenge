@@ -1,28 +1,27 @@
 import React from "react";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useHistory } from "react-router-dom";
 
-export default function Home() {
+export default () => {
 	const history = useHistory();
 	const navigateToQuiz = () => history.push("/quiz");
 
 	return (
-		<div id="home-container">
-			<div className="home-content">
-					<Header />
-				<div id="home">
+		<div id="splash-page-container">
+			<div className="splash-page-content">
+					{/* <Header /> */}
+				<div id="splash-page">
 
-					<h1 className="headline">Welcome to React Trivia Challenge</h1>
+					<h1 id="title" className="headline"> React Trivia <br/> Challenge</h1>
 
-					<h2 id="center-text">Press start to test your trivia knowledge.</h2>
+					<h2 id="splash-subheading"> Put your trivia knowledge to the test. </h2>
 
 					<button
-						id="action-btn"
+						id="start-btn"
 						className="btn btn-success action-btn"
 						onClick={navigateToQuiz}
 					>
-						Start Challenge
+						S T A R T
 					</button>
 					<Footer />
 				</div>

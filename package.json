@@ -4,6 +4,9 @@
   "description": "Trivia quiz made with React, Axios, and Open Trivia Database API.",
   "keywords": [],
   "main": "src/index.js",
+  "engines": {
+    "npm": "7.x"
+  },
   "dependencies": {
     "axios": "0.21.1",
     "react": "17.0.2",

@@ -21,6 +21,8 @@
 
 ---
 
+![screen](./src/images/screen.png)
+
 ##  Getting Started <a name = "environment_setup"></a>
 
 

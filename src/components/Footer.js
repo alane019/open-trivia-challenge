@@ -7,7 +7,12 @@ const Footer = () => {
 			<hr />
 				<Row>
 					<Col className="text-center ">
-						<i>&copy; 2021 Adam Lane </i>
+						<div> Trivia questions provided by 
+							  Open Trvia Database API &nbsp;- &nbsp; 
+							<a href="https://opentdb.com/"
+							rel="noopener" target="_blank" 
+							> https://opentdb.com/ </a>  </div> <br/>
+							<div><i>&copy; 2021 Adam Lane </i></div> 
 					</Col>
 				</Row>
 		</footer>

@@ -250,15 +250,15 @@ font-size: 1.6rem;
 
 
 html:hover{
-	cursor: url('./images/pointer-3.png'),auto;
+	cursor: url('./images/pointer-1.png'),auto;
 }
 
 button:hover {
-	cursor: url('./images/pointer-cursor-2.png'),auto !important;  
+	cursor: url('./images/pointer-2.png'),auto !important;  
 }
 
 link:hover {
-	cursor: url('./images/pointer-cursor-2.png'),auto;  
+	cursor: url('./images/pointer-2.png'),auto;  
 }
   
   
@@ -270,7 +270,7 @@ link:hover {
 	margin-top: 20vh;
 	padding-bottom: 10vh;
 	color: snow;
-	opacity: 20%;
+	opacity: 40%;
 }
 
 .quiz-page div,

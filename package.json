@@ -1,7 +1,7 @@
 {
   "name": "react-trivia-game",
   "version": "1.0.0",
-  "description": "",
+  "description": "Trivia quiz made with React, Axios, and Open Trivia Database API.",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {

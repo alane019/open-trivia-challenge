@@ -25,7 +25,7 @@ const Results = () => {
 
 
   return (
-	  <div>
+	  <div id="results-page">
 	 <Header />
 	 <Container>
 		<div id="results">
@@ -42,22 +42,23 @@ const Results = () => {
 				<ol>	
 					{resultHistory.map((result, i) => (
 						<li className="answer-summary-input" key={i}>
-							<div className={(result.isCorrect ? "item green" : "item red") }>
-								{result.correctOrIncorrect}
-							</div>
-							<div className="question-text">
+														<div className="question-text">
 								{result.questionText}
-							</div>
+						</div>
+						<div className={(result.isCorrect ? "item green" : "item red") }>
+								{result.correctOrIncorrect}
+						</div>
+
 						</li> 
 					))}
 				</ol>
 			
 			</div>
 				<button 
-					id="action-btn" 
+					id="restart-btn" 
 					className="btn btn-success action-btn"
 					onClick={navigateToStartScreen}>
-					Play again?
+					PLAY AGAIN
 				</button>
 		</div>
 	 </Container>

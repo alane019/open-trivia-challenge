@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./bootstrap.min.css";
-import SplashPage from "./pages/SpashPage";
+import SplashPage from "./pages/SplashPage";
 import Quiz from "./pages/Quiz";
 import Results from "./pages/Results";
 import "./App.css";

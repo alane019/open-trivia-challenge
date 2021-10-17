@@ -88,7 +88,7 @@ const Quiz = () => {
 	return (
 		<div className="quiz-page">
 			<Container className="quiz-container center">
-				<h1 className="headline">Question Category: {questionCategory}</h1>
+			<h1 id="question-category" className="headline"> {questionCategory}</h1> 
 				<Row id="question-display-area">
 					<div className="question">{currentQuestion}</div>
 				</Row>

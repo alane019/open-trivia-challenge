@@ -9,7 +9,7 @@
 <i> Test your trivia knowledge with this ReactJS application. 
 </i>
 
-<b> Website: </b> https://react-trivia-game-10172021.herokuapp.com/
+<b> Website: </b> &nbsp;  https://react-trivia-game-10172021.herokuapp.com/
 
 ## Table of Contents
 
@@ -51,7 +51,7 @@ npm start
 
 ## Website <a name = "Website"></a>
 
-Deployed to Heroku: 
+Deployed to Heroku: &nbsp;
 https://react-trivia-game-10172021.herokuapp.com/
 
 ##  Technologies Used  <a name = "tech_stack"></a>

@@ -15,7 +15,7 @@ const Quiz = () => {
 	const [questions, setQuestions] = useState([]);
 
 	const history = useHistory();
-	const triviaData = `https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean`;
+	const triviaData = `https://opentdb.com/api.php?amount=10&type=boolean`;
 
 	const navigateToResults = () => {
 		history.push({

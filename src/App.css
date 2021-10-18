@@ -192,12 +192,41 @@ header * {
 	margin-top: 15px;
 }
 
-#results li,
-.question {
+#results li {
 	text-align: left;
 	font-size: 20px;
 	margin: 15px;
 	padding: 10px;
+}
+
+.question{
+	text-shadow: pink 0  0  4px;
+	font-size: 20px;
+	/* height: 30vh; */
+	text-align: left;
+	font-size: 2rem;
+	margin: 15px;
+	padding: 10px;
+	height: 30vh;
+	max-height: 30vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	}
+
+	#question-display-area{
+		background: linear-gradient( rgba(32, 17, 66, 0.864), rgba(45, 29, 45, 0.789));
+		border: rgba(100, 100, 100, 0.308) solid 1px;
+		max-height: 30vh;
+
+		/* overflow-x:  */
+	}
+
+#results  p,
+#results h1,
+#results .question-text {
+	color: #37ffe8cb;
+	overflow: rgba(27, 13, 20, 0.952) 0 0 5px,  #37ffe8cb 0 0 4px;
+	font-family: 'Dangrek', cursive;
 }
 
 #results-page{
@@ -205,24 +234,19 @@ header * {
 	height: 305vh;
 }
 
-#results  p,
-#results h1,
-#results .question-text {
-	color: #37ffe8cb;
-	text-shadow: rgba(27, 13, 20, 0.952) 0 0 5px,  #37ffe8cb 0 0 4px;
-	font-family: 'Dangrek', cursive;
-
+#result-card-body{
+	height: 35vh;
+	max-height: 40vh;
 }
 
+#result-display-area{
+	height: 10vh;
+} #quiz-progress{
+	height: 10vh !important;
+}
 #results .headline, #score{
 	font-family: 'Dangrek', cursive;
 
-}
-
-.question{
-text-shadow: pink 0  0  4px;
-font-size: 1.6rem;
-height: 30vh;
 }
 
 
@@ -337,9 +361,8 @@ link:hover {
 	margin: 15px;
 }
 
-.questionText {
-	display: block;
-}
+
+
 
 /* pulse animation */
 @keyframes pulse-green {
@@ -445,6 +468,11 @@ display: none;
 div .text-center col{
 	margin-bottom:	5rem;
 
+}
+
+
+.question {
+	font-size: 20px;
 }
 
 

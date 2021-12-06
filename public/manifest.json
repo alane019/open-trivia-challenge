@@ -1,6 +1,6 @@
 {
 	"short_name": "Trivia",
-	"name": "React Trivia Game",
+	"name": "Open Trivia Challenge",
 	"icons":[],
 	"start_url": ".",
 	"display": "standalone",

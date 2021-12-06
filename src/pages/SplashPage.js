@@ -12,13 +12,13 @@ export default () => {
 					{/* <Header /> */}
 				<div id="splash-page">
 
-					<h1 id="title" className="headline"> React Trivia <br/> Challenge</h1>
+					<h1 id="title" className="headline fade-in"> Open Trivia <br/> Challenge</h1>
 
 					<h2 id="splash-subheading"> Put your trivia knowledge to the test. </h2>
 
 					<button
 						id="start-btn"
-						className="btn btn-success action-btn"
+						className="btn btn-success action-btn fade-in"
 						onClick={navigateToQuiz}
 					>
 						S T A R T

@@ -17,23 +17,19 @@
 	backdrop-filter: blur(80px);
 	height: 100vh !important;
 	overflow: auto;
-
 }
 
-#root,
 html,
 body {
 	height: 100vh !important;
 	color: #b7dbe7;
-
+	background-color: #2a1f3f;
 }
 
 #body{
 	background: linear-gradient(#16092bd1, #070b2ea0);
 
 }
-
-
 
 .h1,
 .h2,
@@ -51,7 +47,6 @@ h6 {
 }
 
 /* Buttons */
-
 .btn-success {
 	text-shadow: #143026 0 0 2px;
 	letter-spacing: 1px;
@@ -73,16 +68,6 @@ h6 {
 }
 
 
-/* .start-btn {
-	animation: pulse-green 1s infinite;
-	box-shadow: black 0 0 8px 10px;
-	padding: 8px 23px !important;
-	border-radius: 3px;
-	letter-spacing: 1.25px;
-	font-size: 20px !important;
-	 background: linear-gradient( #279751, #225e39); 
-} */
-
 #start-btn{
 
 	animation: pulse-green 1s infinite;
@@ -97,8 +82,6 @@ h6 {
 	height: 7.5rem;
 	font-size: 3rem !important;
 	background: linear-gradient( #279751, #225e39); 
-
-
 }
 
 #restart-btn{
@@ -110,8 +93,6 @@ h6 {
 	font-size: 2.25rem !important;
 	letter-spacing: .5rem;
 }
-
-
 
 .response-btn {
 	background-color: #1c0c2596;
@@ -289,7 +270,7 @@ header * {
 }
 
 
-html:hover{
+*:hover{
 	cursor: url('./images/pointer-1.png'),auto;
 }
 
@@ -297,13 +278,10 @@ button:hover {
 	cursor: url('./images/pointer-2.png'),auto !important;  
 }
 
-link:hover {
+a:hover {
 	cursor: url('./images/pointer-2.png'),auto;  
 }
   
-  
-
-
 #footer {
 	position: relative;
 	margin: auto;
@@ -322,8 +300,6 @@ link:hover {
 	background: linear-gradient( to bottom, rgba(28, 19, 29, 0.789), rgba(16, 12, 17, 0.952));
 	height: 100vh;
 }
-
-
 
 #quiz-progress {
 	letter-spacing: 2px !important;
@@ -360,9 +336,6 @@ link:hover {
 	padding: 2px 18px;
 	margin: 15px;
 }
-
-
-
 
 /* pulse animation */
 @keyframes pulse-green {
@@ -404,7 +377,6 @@ link:hover {
 	);
 }
 
-
 /* ------ Media query ------------------------- */
 
 @media (max-width: 600px) {
@@ -417,8 +389,6 @@ link:hover {
 	}
 
 
-
-	
 #start-btn, #restart-btn {
 	animation: pulse-green 1s infinite;
 	padding: 8px 23px !important;
@@ -459,9 +429,8 @@ display: none;
 }
 
 #app-outer, #splash-page{
-	background:
-	radial-gradient(#0e1e0913, #0a312315, #0a354723),
-	 linear-gradient(#0e0920, #210f3dd2, #1b0d31d1);
+	 background: linear-gradient(#16092bd1, #070b2ea0);
+	 height: 100vh !important;
 }
 
 
@@ -477,3 +446,5 @@ div .text-center col{
 
 
   }
+
+  

@@ -9,7 +9,7 @@ import "./App.css";
 function App() {
 	return (
 		<BrowserRouter>
-			<div id="app-outer" className="text-center">
+			<div id="app-outer" className="text-center fade-in-page">
 
 				<Switch>
 						<Route path="/quiz" component={Quiz} exact />

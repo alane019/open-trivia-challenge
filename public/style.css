@@ -13,11 +13,11 @@
   }
 
   .fade-in-page {
-	animation: fadeIn linear 1s;
-	-webkit-animation: fadeIn linear 1s;
-	-moz-animation: fadeIn linear 1s;
-	-o-animation: fadeIn linear 1s;
-	-ms-animation: fadeIn linear 1s;
+	animation: fadeIn linear 500ms;
+	-webkit-animation: fadeIn linear  500ms;
+	-moz-animation: fadeIn linear  500ms;
+	-o-animation: fadeIn linear  500ms;
+	-ms-animation: fadeIn linear 500ms;
   }
   
   @keyframes fadeIn {

@@ -242,16 +242,19 @@ header * {
 .splash-page-content {
 	background: linear-gradient(#16092bd1, #070b2ea0);
 	height: 100vh !important;
+	box-sizing: border-box;
 }
 
 #splash-page-container{
 	height: 100vh !important;
+	box-sizing: border-box;
 }
 
 #splash-page {
 	width: 100%;
 	height: 100vh !important;
 	text-shadow: black;
+	box-sizing: border-box;
 	/* margin-top: 5vh !important; */
 }
 
@@ -430,7 +433,7 @@ display: none;
 
 #app-outer, #splash-page{
 	 background: linear-gradient(#16092bd1, #070b2ea0);
-	 height: 100vh !important;
+	 /* height: 100vh !important; */
 }
 
 

@@ -1,6 +1,9 @@
 #root, html {
-	background-color: #251b38;
+	background-color: #604c15;
+	background: linear-gradient(#16092bd1, #070b2ea0);
+	backdrop-filter: blur(30px) invert(.8) hue-rotate(50deg);
 } 
+
  
  /* ------------ Fade in  -------------- */
 

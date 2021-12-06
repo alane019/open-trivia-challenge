@@ -28,7 +28,6 @@ body {
 
 #body{
 	background: linear-gradient(#16092bd1, #070b2ea0);
-
 }
 
 .h1,
@@ -55,7 +54,6 @@ h6 {
 	background-color: #348d56 !important;
 }
 
-
 .action-btn {
 	animation: pulse-green 1s infinite;
 	box-shadow: black 0 0 8px 10px;
@@ -67,9 +65,7 @@ h6 {
 	background: linear-gradient(#30c267, #279751);
 }
 
-
 #start-btn{
-
 	animation: pulse-green 1s infinite;
 	box-shadow: black 0 0 8px 10px;
 	padding: 8px 23px !important;
@@ -118,8 +114,6 @@ h6 {
 	background-color: #4c7cb3bb;
 }
 
-
-
 header * {
 	background-color: rgba(128, 0, 128, 0.144);
 	height: 1px;
@@ -152,9 +146,7 @@ header * {
 	padding-top: 3.5vh;
 	font-family: 'Dangrek', cursive;
 	color: #96d1e1e2;
-
 }
-
 
 #results {
 	color: #37ffe8cb;
@@ -241,37 +233,34 @@ header * {
 
 .splash-page-content {
 	background: linear-gradient(#16092bd1, #070b2ea0);
-	height: 100vh !important;
-	box-sizing: border-box;
-}
-
-#splash-page-container{
-	height: 100vh !important;
 	box-sizing: border-box;
 }
 
 #splash-page {
+	height: 112vh !important; 
+	box-sizing: border-box;
 	width: 100%;
-	height: 100vh !important;
 	text-shadow: black;
 	box-sizing: border-box;
-	/* margin-top: 5vh !important; */
+	backdrop-filter: blur(50px) invert(.82) hue-rotate(30deg) opacity(.22);
+	background:  linear-gradient(#16092bd1, #070b2ea0);
+
 }
 
 #splash-subheading {
-	margin-top: 12vh;
+	margin-top: 4vh;
 	color: #9ebac3;
+	max-width: 80vw;
+	margin: auto;
 	text-shadow: black 0 0 8px;
 	letter-spacing: 1.5px;
 	font-size: 1.5rem;
 	font-family: 'Dangrek', cursive;
-
 }
 
 #quiz-progress{
  color: rgb(120, 205, 228);
 }
-
 
 *:hover{
 	cursor: url('./images/pointer-1.png'),auto;
@@ -288,10 +277,20 @@ a:hover {
 #footer {
 	position: relative;
 	margin: auto;
-	margin-top: 20vh;
-	padding-bottom: 10vh;
+	margin-top: 12vh;
 	color: snow;
 	opacity: 40%;
+	margin-bottom: 0px;
+}
+.otdb-link {
+	color:rgba(216, 237, 245, 0.728);
+}
+
+.otdb-link:hover {
+	color: rgba(151, 220, 245, 0.728);
+}
+#footer .row{
+  padding-bottom: 4vh;
 }
 
 .quiz-page div,
@@ -425,17 +424,15 @@ display: none;
 	padding: 20px;
 }
 
-#splash-subheading{
- max-width: 80vw;
- margin: auto;
- margin-top: 1rem;
-}
 
 #app-outer, #splash-page{
 	 background: linear-gradient(#16092bd1, #070b2ea0);
 	 /* height: 100vh !important; */
 }
 
+#app-outer #splash-page{
+overflow: hidden;
+}
 
 div .text-center col{
 	margin-bottom:	5rem;

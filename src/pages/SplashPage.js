@@ -8,7 +8,7 @@ export default () => {
 
 	return (
 		<div id="splash-page-container">
-			<div className="splash-page-content">
+
 					{/* <Header /> */}
 				<div id="splash-page">
 
@@ -26,6 +26,5 @@ export default () => {
 					<Footer />
 				</div>
 			</div>
-		</div>
 	);
 }

@@ -1,15 +1,9 @@
 
-# React Trivia Challenge
-
-
+# Open Trivia Challenge
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-
-<i> Test your trivia knowledge with this ReactJS application. 
-</i>
-
-<b> Website: </b> &nbsp;  https://react-trivia-game-10172021.herokuapp.com/
+<b> Website: </b> &nbsp;  https://open-trivia-challenge-10172021.herokuapp.com/
 
 ## Table of Contents
 
@@ -26,8 +20,7 @@
 
 ##  Getting Started <a name = "environment_setup"></a>
 
-To run this application in your own development environment, you will need to install [NodeJs](https://nodejs.org/en/about/) and [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). This article can assist with questions on preparing your development environment: https://medium.com/javascript-first/terminal-basics-and-installing-nvm-node-js-631cf9476ac4
-
+To run this application in your own development environment, install [NodeJs](https://nodejs.org/en/about/) and [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), and a text editor of your choice.
 
 
 ----
@@ -52,7 +45,7 @@ npm start
 ## Website <a name = "Website"></a>
 
 Deployed to Heroku: &nbsp;
-https://react-trivia-game-10172021.herokuapp.com/
+ https://open-trivia-challenge-10172021.herokuapp.com/
 
 ##  Technologies Used  <a name = "tech_stack"></a>
 - [NodeJS](https://nodejs.org/) -  JavaScript runtime

@@ -12,7 +12,7 @@ const Footer = () => {
 							rel="noopener" target="_blank"
 							className="otdb-link"> 
 							 https://opentdb.com/ </a>  </div> <br/>
-							<div><i>&copy; 2021 Adam Lane </i></div> 
+							<div><i>&copy; {new Date().getFullYear()} Adam Lane </i></div> 
 					</Col>
 				</Row>
 		</footer>

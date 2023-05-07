@@ -3,16 +3,18 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-<b> Website: </b> &nbsp;  https://open-trivia-challenge-10172021.herokuapp.com/
+<b> Website: </b> &nbsp;  https://open-trivia-challenge.herokuapp.com/
 
 ## Table of Contents
 
 
-- [Getting Started](#environment_setup)
-- [Launch the Application](#launch)
-- [Website](#website)
-- [Built Using](#tech_stack)
-- [Contributing](#contributing)
+- [Open Trivia Challenge](#open-trivia-challenge)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started ](#getting-started-)
+  - [Launch the Application  ](#launch-the-application--)
+  - [Website ](#website-)
+  - [Technologies Used  ](#technologies-used--)
+  - [Contributing ](#contributing-)
 
 ---
 
@@ -45,7 +47,7 @@ npm start
 ## Website <a name = "Website"></a>
 
 Deployed to Heroku: &nbsp;
- https://open-trivia-challenge-10172021.herokuapp.com/
+ https://open-trivia-challenge.herokuapp.com/
 
 ##  Technologies Used  <a name = "tech_stack"></a>
 - [NodeJS](https://nodejs.org/) -  JavaScript runtime

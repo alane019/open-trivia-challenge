@@ -1,0 +1,49 @@
+#root, html {
+	background-color: #604c15;
+	background: linear-gradient(#16092bd1, #070b2ea0);
+	backdrop-filter: blur(30px) invert(.8) hue-rotate(50deg);
+} 
+
+ 
+ /* ------------ Fade in  -------------- */
+
+ .fade-in {
+	animation: fadeIn linear 3s;
+	-webkit-animation: fadeIn linear 3s;
+	-moz-animation: fadeIn linear 3s;
+	-o-animation: fadeIn linear 3s;
+	-ms-animation: fadeIn linear 3s;
+  }
+
+  .fade-in-page {
+	animation: fadeIn linear 500ms;
+	-webkit-animation: fadeIn linear  500ms;
+	-moz-animation: fadeIn linear  500ms;
+	-o-animation: fadeIn linear  500ms;
+	-ms-animation: fadeIn linear 500ms;
+  }
+  
+  @keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+  }

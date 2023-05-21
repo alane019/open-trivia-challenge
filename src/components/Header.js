@@ -8,7 +8,7 @@ const Header = () => {
       <Navbar id="nav" expand="lg"  variant="dark">
         <div>
           <LinkContainer to="/">
-            <Navbar.Brand id="nav-text" className="mr-auto">React Trivia Challenge</Navbar.Brand>
+            <Navbar.Brand id="nav-text" className="mr-auto">Open Trivia Challenge</Navbar.Brand>
           </LinkContainer>
         </div>
       </Navbar>
